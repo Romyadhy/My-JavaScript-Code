@@ -1,0 +1,7 @@
+DOM mreupakan DOCUMENT OBJEK MODEL, yang bisa diterapkan di javascript. Jadi kita bisa mengakses document HTML kita menggunakan javascript dengan DOM, kita juga bisa mengubah style dari HTMLnya, seperti mengubah warna menambahkan text dan lain-lainnya. DOM dapat memudahkan kita dalam memanifulasi hal tesebut.
+
+1. Element Manipulation
+document. = merupakan cara pemangilan HTML di javasript.
+2. Data Selector
+3. JS Styling
+4. Event
