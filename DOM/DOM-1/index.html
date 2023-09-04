@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar-DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="body">
+    <h1 class="judul">Change Color</h1>
+    <p class="des">Please shift the mouse over the color</p>
+
+    <div class="ttbele">
+      <table class="table" border="0">
+        <tr class="tr">
+          <td class="td1" id="satu" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')">a</td>
+          <td class="td2" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')">b</td>
+          <td class="td3" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transparent')">c</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="button">
+      <button id="randomButton" class="butt" onmouseover="gantiText()" onmouseout="returnText()">ayo klik aku!</button>
+    </div>
+  </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
+

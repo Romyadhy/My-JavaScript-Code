@@ -1,0 +1,54 @@
+*{
+    max-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.body{
+    /* background-image: url(/VanillaProject30D/DrumKit-01/img/japan.jpg); */
+    /* background-color: antiquewhite; 2. gimana caranya kita ngeblok ini agar yang keliatan itu cuman bg yang di mouseover */
+    min-height: 100vh;
+}
+.table{
+    width: 300px;
+    height: 100px;
+}
+
+.judul, .des{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.ttbele{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#randomButton{
+    position: absolute;
+}
+
+.butt{
+    width: 100px;
+    border-radius: 2rem;
+
+}
+
+
+/* .tr{
+    color: white;
+}
+.td1{
+    background-color: aqua;
+}
+
+.td2{
+    background-color: bisque;
+}
+
+.td3{
+    background-color: black;
+} */
