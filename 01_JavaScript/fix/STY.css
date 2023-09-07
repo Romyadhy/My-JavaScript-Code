@@ -1,0 +1,25 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.judul
+{
+    padding: 20px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.imgs .butt
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.butt
+{
+    margin: 3rem;
+}
