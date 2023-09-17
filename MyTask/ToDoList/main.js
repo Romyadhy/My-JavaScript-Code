@@ -1,6 +1,8 @@
+//Take de elemen with DOM
 const input = document.getElementById('input');
 const list = document.getElementById('list-container');
 
+// Add task to screen
 function AddTask(){
     if(input.value === ''){
         alert("You not yet enter the task!!");
@@ -30,11 +32,24 @@ list.addEventListener('click', function(s){
 }, false);
 
 
+// CLICK BUTTON WITH ENTER and will display the list of task
+input.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        AddTask();
+    }
+});
+
+
 // We can save the data, so if we refreh the web the data it's not removed too
 function saveData(){
     localStorage.setItem("Data", list.innerHTML);
 }
-function disData(){
+
+// Take data from lokal storage, when the web refrehed
+function displayData(){
     list.innerHTML = localStorage.getItem("Data");
 }
-disData();
+displayData();
+
+// I use when i want to clear temp in localstorage, or to clear all the localstorage
+// localStorage.clear();
