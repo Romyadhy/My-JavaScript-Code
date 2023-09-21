@@ -3,24 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teset</title>
+    <title>Task-Wajib</title>
+    <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
-    <h1 id="tes">TASK</h1>
 
-    <div class="form">
-        <form action="">
-            <p id="pe">Enter the values of fibonacci <input type="text" placeholder="masukan angka"></p>
-        </form>
+    <div class="title">
+        <h1>Fibonancci Squence and Volume Calculation Of Geometric Shapes </h1>
+    </div>
 
-        <div class="hasil">
-            <p>hasil \u007d</p>
+    <div class="fibonaci" id="fibonacci">
+        <div class="fibo">
+            <br for="inputVal">Enter the value: <br></br></label>
+            <input type="number" name="inputVal" id="inputVal">
+            <button class="submit" onclick="fibocalcu()">submit</button>
+            <p>Result fibonacci: <span id="result"></span></p>
         </div>
         
     </div>
- 
 
+    <div class="volume">
+            <label for="selct">Select Bangun Ruang: </label>
+            <select name="select" id="selct">
+                <option value="kubus">Kubus</option>
+                <option value="balok">Balok</option>
+                <option value="limas">Limas</option>
+                <option value="silinder">Silinder</option>
+                <option value="kerucut">Kerucut</option>
+                <option value="bola">Bola</option>
+            </select>
 
-    <script src="main.js"></script>
+            <div id="kubus" style="display: block;">
+                <label for="kubusSide">Masukan panjang sisi kubus: </label>
+                <input type="number" id="kubusSide">
+            </div>
+
+            <div id="balok" style="display: none;">
+                <label for="B-panjang">Panjang balok:</label>
+                <input type="number" id="B-panjang"><br>
+                <label for="B-lebar">Lebar balok:</label>
+                <input type="number" id="B-lebar"><br>
+                <label for="B-tinggi">Tinggi balok:</label>
+                <input type="number" id="B-tinggi"><br>
+            </div>
+
+            <div id="limas" style="display: none;">
+                <label for="alas-limas">Luas alas Limas:</label>
+                <input type="number" id="alas-limas"><br>
+                <label for="tinggi-limas">Tinggi Limas:</label>
+                <input type="number" id="tinggi-limas"><br>
+            </div>
+
+            <div id="silinder" style="display: none;">
+                <label for="jari-silinder">Jari-Jari Silinder:</label>
+                <input type="number" id="jari-silinder"><br>
+                <label for="tinggi-silinder">Tinggi Silinder:</label>
+                <input type="number" id="tinggi-silinder"><br>
+            </div>
+
+            <div id="kerucut" style="display: none;">
+                <label for="jari-kerucut">Jari-Jari Kerucut:</label>
+                <input type="number" id="jari-kerucut"><br>
+                <label for="tinggi-kerucut">Tinggi Kerucut:</label>
+                <input type="number" id="tinggi-kerucut"><br>
+            </div>
+
+            <div id="bola" style="display: none;">
+                <label for="jari-jariBol">Jari-Jari Bola:</label>
+                <input type="number" id="jari-jariBol">
+            </div>
+            <button id="buttonSub" onclick="calculateVolume()">Calculation</button>
+
+        <p>Result: <span id="resutlVol"></span></p>
+    </div>
+
+    
+   
+    <script src="main.js" ></script>
 </body>
 </html>

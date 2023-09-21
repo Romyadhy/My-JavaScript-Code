@@ -1,0 +1,63 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+:root{
+    --primaryClr: #0082c8;
+    --secCol: #2193b0;
+    --secSec: #6dd5e6;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-image: url(https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2029&q=80);
+    background-size: cover;
+    
+
+}
+
+.title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #ffff;
+}
+
+.fibonaci{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fibonaci, .fibo{
+    font-size: 1.5rem;
+    color: rgb(193, 193, 193);
+}
+
+
+.fibonaci .fibo input{
+    border: none;
+    background-color: rgb(193, 193, 193);
+    padding: 0.5rem;
+    border-radius: 20px;
+    
+}
+
+.fibonaci .fibo button{
+    width: 50px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--primaryClr);
+    cursor: pointer;
+    border: none;
+}
