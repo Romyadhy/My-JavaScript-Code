@@ -1,6 +1,8 @@
 //Take de elemen with DOM
 const input = document.getElementById('input');
 const list = document.getElementById('list-container');
+const inputName = document.getElementById('inputName');
+// console.log(inputName);
 
 // Add task to screen
 function AddTask(){
@@ -29,6 +31,7 @@ list.addEventListener('click', function(s){
         s.target.parentElement.remove();
         saveData();
     }
+    // displayData();
 }, false);
 
 
@@ -38,6 +41,36 @@ input.addEventListener('keydown', function(event){
         AddTask();
     }
 });
+
+
+//When user clik enter the name will be set as they input
+inputName.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){
+        saveName();
+    }
+}); 
+
+
+// Save Name
+function saveName(){
+    const inptName = inputName.value.trim();
+    if(inptName !== ''){
+        localStorage.setItem("UserName", inptName);
+    }
+}
+
+
+
+
+// Display Name
+function displayName(){
+    const nama = localStorage.getItem("UserName");
+    if(nama){
+        inputName.value = nama;
+    }
+}
+displayName();
+
 
 
 // We can save the data, so if we refreh the web the data it's not removed too
