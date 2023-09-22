@@ -14,6 +14,14 @@ const J_KRCT = document.getElementById("jari-kerucut");
 const T_KRCT = document.getElementById("tinggi-kerucut");
 const J_BOL = document.getElementById("jari-jariBol");
 const slct = document.getElementById("selct");
+const restvol = document.getElementById("resutlVol");
+const cube = document.getElementById("kubus");
+const rectangular = document.getElementById("balok");
+const pyramid = document.getElementById("limas");
+const cylinderr = document.getElementById("silinder");
+const cone = document.getElementById("kerucut");
+const shperee = document.getElementById("bola");
+
 
 
 
@@ -47,47 +55,52 @@ function fibonacci(inputVal) {
 function calculateVolume() {
     const selectedShape = slct  .value;
     // KUBUS
-    const kubusSide = parseFloat(kubusS.value);
+    const cubeSide = parseFloat(kubusS.value);
     // BALOK
-    const panjangBalok = parseFloat(Blk_P.value);
-    const lebarBalok = parseFloat(Blk_L.value);
-    const tinggiBalok = parseFloat(Blk_T.value);
+    const lengtR = parseFloat(Blk_P.value);
+    const widthR = parseFloat(Blk_L.value);
+    const heightR = parseFloat(Blk_T.value);
     // LIMAS
-    const limasAlas = parseFloat(A_LMS.value);
-    const limasTinggi = parseFloat(T_LMS.value);
+    const pyramidA = parseFloat(A_LMS.value);
+    const pyramidH = parseFloat(T_LMS.value);
     // SILINDER
-    const tabungRadius = parseFloat(J_Sndr.value);
-    const tinggiTabung = parseFloat(T_Sndr.value);
+    const silinderR = parseFloat(J_Sndr.value);
+    const silinderH = parseFloat(T_Sndr.value);
     // KERUCUT
-    const kerucutRadius = parseFloat(J_KRCT.value);
-    const kerucutTinggi = parseFloat(T_KRCT.value);
+    const coneR = parseFloat(J_KRCT.value);
+    const coneH = parseFloat(T_KRCT.value);
     // BOLA
-    const bolaRadius = parseFloat(J_BOL.value);
+    const shpereR = parseFloat(J_BOL.value);
 
-    if (selectedShape === "kubus" && !isNaN(kubusSide) && kubusSide >= 0) {
-        const volume = kubusSide ** 3;
-    
-        document.getElementById("resutlVol").textContent = `Cube Volume: ${volume.toFixed(2)}`;
+    // CUBE
+    if (selectedShape === "kubus" && !isNaN(cubeSide) && cubeSide >= 0) {
+        const volume = cubeSide ** 3;
+        restvol.textContent = `Cube Volume: ${volume.toFixed(2)}`;
     } 
-    else if (selectedShape === "balok" && !isNaN(panjangBalok) && !isNaN(lebarBalok) && !isNaN(tinggiBalok) && panjangBalok >= 0 && lebarBalok >= 0 && tinggiBalok >= 0) {
-        const volume = panjangBalok * lebarBalok * tinggiBalok;
-        document.getElementById("resutlVol").textContent = `Ractangle Volume: ${volume.toFixed(2)}`;
+    // RECTANGGLE
+    else if (selectedShape === "balok" && !isNaN(lengtR) && !isNaN(widthR) && !isNaN(heightR) && lengtR >= 0 && widthR >= 0 && heightR >= 0) {
+        const volume = lengtR * widthR * heightR;
+        restvol.textContent = `Rectangular Prism Volume: ${volume.toFixed(2)}`;
     } 
-    else if (selectedShape === "limas" && !isNaN(limasAlas) && !isNaN(limasTinggi) && limasAlas >= 0 && limasTinggi >= 0) {
-        const volume = (1 / 3) * limasAlas * limasTinggi;
-        document.getElementById("resutlVol").textContent = `Pyramid Volume: ${volume.toFixed(2)}`;
+    // Pyramid
+    else if (selectedShape === "limas" && !isNaN(pyramidA) && !isNaN(pyramidH) && pyramidA >= 0 && pyramidH >= 0) {
+        const volume = (1 / 3) * pyramidA * pyramidH;
+        restvol.textContent = `Pyramid Volume: ${volume.toFixed(2)}`;
     }
-    else if (selectedShape === "silinder" && !isNaN(tabungRadius) && !isNaN(tinggiTabung) && tabungRadius >= 0 && tinggiTabung >= 0) {
-        const volume = Math.PI * (tabungRadius ** 2) * tinggiTabung;
-        document.getElementById("resutlVol").textContent = `Cylinder Volume: ${volume.toFixed(2)}`;
+    // Cylinder
+    else if (selectedShape === "silinder" && !isNaN(silinderR) && !isNaN(silinderH) && silinderR >= 0 && silinderR >= 0) {
+        const volume = Math.PI * (silinderR ** 2) * silinderH;
+        restvol.textContent = `Cylinder Volume: ${volume.toFixed(2)}`;
     }
-    else if (selectedShape === "kerucut" && !isNaN(kerucutRadius) && !isNaN(kerucutTinggi) && kerucutRadius >= 0 && kerucutTinggi >= 0) {
-        const volume = (1 / 3) * Math.PI * (kerucutRadius ** 2) * kerucutTinggi;
-        document.getElementById("resutlVol").textContent = `Cone Volume: ${volume.toFixed(2)}`;
+    // Cone
+    else if (selectedShape === "kerucut" && !isNaN(coneR) && !isNaN(coneH) && coneR >= 0 && coneH >= 0) {
+        const volume = (1 / 3) * Math.PI * (coneR ** 2) * coneH;
+        restvol.textContent = `Cone Volume: ${volume.toFixed(2)}`;
     }
-    else if (selectedShape === "bola" && !isNaN(bolaRadius) && bolaRadius >= 0) {
-        const volume = (4 / 3) * Math.PI * (bolaRadius ** 3);
-        document.getElementById("resutlVol").textContent = `Sphere Volume: ${volume.toFixed(2)}`;
+    // Shpere
+    else if (selectedShape === "bola" && !isNaN(shpereR) && shpereR >= 0) {
+        const volume = (4 / 3) * Math.PI * (shpereR ** 3);
+        restvol.textContent = `Sphere Volume: ${volume.toFixed(2)}`;
     }
     else {
         alert("Please enter the number, and positive number.");
@@ -98,51 +111,51 @@ function calculateVolume() {
 select.addEventListener("change", function () {
     const selectedShape = this.value;
     if (selectedShape === "kubus") {
-        document.getElementById("kubus").style.display = "block";
-        document.getElementById("balok").style.display = "none";
-        document.getElementById("limas").style.display = "none";
-        document.getElementById("silinder").style.display = "none";
-        document.getElementById("kerucut").style.display = "none";
-        document.getElementById("bola").style.display = "none";
+        cube.style.display = "block";
+        rectangular.style.display = "none";
+        pyramid.style.display = "none";
+        cylinderr.style.display = "none";
+        cone.style.display = "none";
+        shperee.style.display = "none";
     } 
     else if (selectedShape === "balok") {
-        document.getElementById("kubus").style.display = "none";
-        document.getElementById("balok").style.display = "block";
-        document.getElementById("limas").style.display = "none";
-        document.getElementById("silinder").style.display = "none";
-        document.getElementById("kerucut").style.display = "none";
-        document.getElementById("bola").style.display = "none";
+        cube.style.display = "none";
+        rectangular.style.display = "block";
+        pyramid.style.display = "none";
+        cylinderr.style.display = "none";
+        cone.style.display = "none";
+        shperee.style.display = "none";
     }
     else if (selectedShape === "limas") {
-        document.getElementById("kubus").style.display = "none";
-        document.getElementById("balok").style.display = "none";
-        document.getElementById("limas").style.display = "block";
-        document.getElementById("silinder").style.display = "none";
-        document.getElementById("kerucut").style.display = "none";
-        document.getElementById("bola").style.display = "none";
+        cube.style.display = "none";
+        rectangular.style.display = "none";
+        pyramid.style.display = "block";
+        cylinderr.style.display = "none";
+        cone.style.display = "none";
+        shperee.style.display = "none";
     }
     else if (selectedShape === "silinder") {
-        document.getElementById("kubus").style.display = "none";
-        document.getElementById("balok").style.display = "none";
-        document.getElementById("limas").style.display = "none";
-        document.getElementById("silinder").style.display = "block";
-        document.getElementById("kerucut").style.display = "none";
-        document.getElementById("bola").style.display = "none";
+        cube.style.display = "none";
+        rectangular.style.display = "none";
+        pyramid.style.display = "none";
+        cylinderr.style.display = "block";
+        cone.style.display = "none";
+        shperee.style.display = "none";
     }
     else if (selectedShape === "kerucut") {
-        document.getElementById("kubus").style.display = "none";
-        document.getElementById("balok").style.display = "none";
-        document.getElementById("limas").style.display = "none";
-        document.getElementById("silinder").style.display = "none";
-        document.getElementById("kerucut").style.display = "block";
-        document.getElementById("bola").style.display = "none";
+        cube.style.display = "none";
+        rectangular.style.display = "none";
+        pyramid.style.display = "none";
+        cylinderr.style.display = "none";
+        cone.style.display = "block";
+        shperee.style.display = "none";
     }
     else if (selectedShape === "bola") {
-        document.getElementById("kubus").style.display = "none";
-        document.getElementById("balok").style.display = "none";
-        document.getElementById("limas").style.display = "none";
-        document.getElementById("silinder").style.display = "none";
-        document.getElementById("kerucut").style.display = "none";
-        document.getElementById("bola").style.display = "block";
+        cube.style.display = "none";
+        rectangular.style.display = "none";
+        pyramid.style.display = "none";
+        cylinderr.style.display = "none";
+        cone.style.display = "none";
+        shperee.style.display = "block";
     }
 });

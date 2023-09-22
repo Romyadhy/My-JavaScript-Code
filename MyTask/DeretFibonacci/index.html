@@ -8,14 +8,20 @@
    
 </head>
 <body>
+    <div class="identiti">
+        <h2>Nama: <span>I Putu Romyadhy Mahaputra</span></h2>
+        <h2>NIM: <span>2215101052</span></h2>
+
+    </div>
 
     <div class="title">
-        <h1>Fibonancci Squence and Volume Calculation Of Geometric Shapes </h1>
+        <h1>Simple App to Calculation Arithmetic Operations</h1>
     </div>
 
     <div class="fibonaci" id="fibonacci">
         <div class="fibo">
-            <br for="inputVal">Enter the value: <br></br></label>
+            <h2>1. Fibonancci Squence</h2>
+            <label for="inputVal">Enter the value:</label>
             <input type="number" name="inputVal" id="inputVal">
             <button class="submit" onclick="fibocalcu()">submit</button>
             <p>Result fibonacci: <span id="result"></span></p>
@@ -24,58 +30,69 @@
     </div>
 
     <div class="volume">
-            <label for="selct">Select Bangun Ruang: </label>
+        <h2>2. Volume Shape</h2>
+        <div class="selItem">
+            <label for="selct" class="select">Select the geometry: </label>
             <select name="select" id="selct">
-                <option value="kubus">Kubus</option>
-                <option value="balok">Balok</option>
-                <option value="limas">Limas</option>
-                <option value="silinder">Silinder</option>
-                <option value="kerucut">Kerucut</option>
-                <option value="bola">Bola</option>
+                <option value="kubus">Cube </option>
+                <option value="balok">Rectangular Prism</option>
+                <option value="limas">Pyramid</option>
+                <option value="silinder">Cylinder</option>
+                <option value="kerucut">Cone</option>
+                <option value="bola">Sphere</option>
             </select>
-
+        </div>
+           
+        <div class="hero-item">
             <div id="kubus" style="display: block;">
-                <label for="kubusSide">Masukan panjang sisi kubus: </label>
+                <label for="kubusSide">Enter the length of the side of the cube: </label>
                 <input type="number" id="kubusSide">
             </div>
 
             <div id="balok" style="display: none;">
-                <label for="B-panjang">Panjang balok:</label>
+                <label for="B-panjang">Rectangular Prism Length: </label>
                 <input type="number" id="B-panjang"><br>
-                <label for="B-lebar">Lebar balok:</label>
+                <label for="B-lebar">Rectangular Prism Wide: </label>
                 <input type="number" id="B-lebar"><br>
-                <label for="B-tinggi">Tinggi balok:</label>
+                <label for="B-tinggi">Rectangular Prism Height: </label>
                 <input type="number" id="B-tinggi"><br>
             </div>
 
             <div id="limas" style="display: none;">
-                <label for="alas-limas">Luas alas Limas:</label>
+                <label for="alas-limas">Pyramid base area:</label>
                 <input type="number" id="alas-limas"><br>
-                <label for="tinggi-limas">Tinggi Limas:</label>
+                <label for="tinggi-limas">Pyramid height</label>
                 <input type="number" id="tinggi-limas"><br>
             </div>
 
             <div id="silinder" style="display: none;">
-                <label for="jari-silinder">Jari-Jari Silinder:</label>
+                <label for="jari-silinder">Cylinder Radius:</label>
                 <input type="number" id="jari-silinder"><br>
-                <label for="tinggi-silinder">Tinggi Silinder:</label>
+                <label for="tinggi-silinder">Cylinder Height:</label>
                 <input type="number" id="tinggi-silinder"><br>
             </div>
 
             <div id="kerucut" style="display: none;">
-                <label for="jari-kerucut">Jari-Jari Kerucut:</label>
+                <label for="jari-kerucut">Cone radius:</label>
                 <input type="number" id="jari-kerucut"><br>
-                <label for="tinggi-kerucut">Tinggi Kerucut:</label>
+                <label for="tinggi-kerucut">Cone height:</label>
                 <input type="number" id="tinggi-kerucut"><br>
             </div>
 
             <div id="bola" style="display: none;">
-                <label for="jari-jariBol">Jari-Jari Bola:</label>
+                <label for="jari-jariBol">Sphere radius:</label>
                 <input type="number" id="jari-jariBol">
             </div>
+        </div>
+            
+        <div class="BNR">
             <button id="buttonSub" onclick="calculateVolume()">Calculation</button>
+            <div class="result">
 
-        <p>Result: <span id="resutlVol"></span></p>
+                <p>Result: <span id="resutlVol"></span></p>
+            </div>
+        </div>
+
     </div>
 
     

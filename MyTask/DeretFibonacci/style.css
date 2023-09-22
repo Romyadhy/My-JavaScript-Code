@@ -5,6 +5,7 @@
     --primaryClr: #0082c8;
     --secCol: #2193b0;
     --secSec: #6dd5e6;
+    --whiteCol: rgb(193, 193, 193);
 
 }
 
@@ -23,6 +24,14 @@ body{
 
 }
 
+.identiti{
+    margin: 1rem;
+}
+
+.identiti span{
+    color: var(--whiteCol);
+}
+
 .title h1{
     display: flex;
     justify-content: center;
@@ -37,27 +46,195 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .fibonaci, .fibo{
     font-size: 1.5rem;
-    color: rgb(193, 193, 193);
+    color: var(--whiteCol);
 }
 
 
 .fibonaci .fibo input{
     border: none;
-    background-color: rgb(193, 193, 193);
+    background-color: var(--whiteCol);
     padding: 0.5rem;
-    border-radius: 20px;
-    
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .fibonaci .fibo button{
-    width: 50px;
+    width: 60px;
     height: 30px;
-    border-radius: 20px;
-    background-color: var(--primaryClr);
+    border-radius: 10px;
+    background-color: var(--secCol);
     cursor: pointer;
     border: none;
+   
 }
+
+.fibonaci .fibo button:hover{
+    background-color: var(--secSec);
+}
+
+.fibonaci .fibo span{
+    color: var(--whiteCol);
+}
+
+.volume{
+    margin: 1rem;
+}
+
+
+.volume h2{
+    color: var(--whiteCol);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.selItem{
+    /* background-color: red; */
+    display: flex;
+    /* margin: auto; */
+    justify-content: center;
+    align-items: center;
+    color: var(--whiteCol);
+    font-size: 1.5rem;
+}
+.selItem select{
+    background-color: var(--whiteCol);
+    padding: 0.6rem;
+    border: none;
+    border-radius: 10px;
+    margin: 1rem;
+    cursor: pointer;;
+}
+
+.hero-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--whiteCol);
+    font-size: 1.5rem;
+}
+
+.hero-item input{
+    background-color: var(--whiteCol);
+    border: none;
+    border-radius: 10px;
+    padding: 0.6rem;
+    margin: 1rem;
+    /* background-color: red; */
+}
+
+.BNR{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* background-color: red; */
+}
+
+.BNR button{
+    display: flex;
+    padding: 1rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--secCol);
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 5px 3px 3px black;
+}
+
+.BNR button:hover{
+    background-color: var(--secSec);
+}
+
+.result{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--whiteCol);   
+    font-size: 1.5rem;
+}
+
+
+
+/* media query */
+/* Stil default untuk semua perangkat */
+
+
+/* Media query untuk perangkat berukuran kecil (misalnya, ponsel) */
+@media (min-width: 320px) and (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+    .title h1{
+        font-size: 1.5rem;
+    }
+    .fibonaci .fibo h2{
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* margin: 1rem; */
+    }
+    .fibonaci .fibo label{
+        font-size: 1rem;
+
+    }
+    .fibonaci .fibo input{
+        padding: 0.3rem;
+    }
+    .fibonaci .fibo p{
+        font-size: 1rem;
+    }
+    .volume h2{
+        font-size: 1.5rem;
+    }
+    .BNR button{
+        padding: 0.6rem;
+    }
+
+    .volume h2{
+        font-size: 1.5rem;
+    }
+    .selItem{
+        font-size: 1rem;
+    }
+
+    .selItem select{
+        padding: 0.2rem;
+    }
+    .hero-item{
+        font-size: 1rem;
+        margin: none;
+    }
+    .hero-item input{
+        padding: 0.3rem;
+        display: flex;
+    }
+    .result{
+        font-size: 1rem;
+    }
+    
+}
+
+/* Media query untuk perangkat berukuran menengah (misalnya, tablet) */
+@media (min-width: 480px) and (max-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+
+    .hero-item input{
+        display: flex;
+        padding: 0.5rem;
+        margin: auto    ;
+    }
+}
+
